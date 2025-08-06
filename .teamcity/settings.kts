@@ -31,10 +31,6 @@ project {
 
     buildType(Build)
     buildType(TestTeamcityPathPrefix)
-
-    params {
-        param("env.TEAMCITY_PATH_PREFIX", "/opt/custom-bin")
-    }
 }
 
 object Build : BuildType({
