@@ -1,4 +1,6 @@
-fun Recipe.build() {
+import jetbrains.buildServer.configs.kotlin.v2019_2.*
+
+recipe {
     buildType {
         id("PathPrefixFail")
         name = "Exec Mode Fails With TEAMCITY_PATH_PREFIX"
