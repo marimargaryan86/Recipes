@@ -29,6 +29,7 @@ version = "2025.03"
 project {
 
     buildType(Build)
+    buildType(TestTeamcityPathPrefix)
 }
 
 object Build : BuildType({
@@ -64,4 +65,8 @@ object Build : BuildType({
         perfmon {
         }
     }
+})
+
+object TestTeamcityPathPrefix : BuildType({
+    name = "Test TEAMCITY_PATH_PREFIX"
 })
