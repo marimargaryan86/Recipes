@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.exec
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -50,7 +51,7 @@ object Build : BuildType({
             param("plugin.docker.imageId", "")
             param("teamcity.step.phase", "")
             param("plugin.docker.run.parameters", "")
-            param("env.input_access_token", "zxx775d03cbe80d301b")
+            param("env.input_access_token", "")
             param("env.input_build_id", "207")
             param("env.input_server_url", "%teamcity.serverUrl%")
         }
@@ -72,5 +73,13 @@ object TestTeamcityPathPrefix : BuildType({
 
     params {
         param("env.TEAMCITY_PATH_PREFIX", "/opt/custom-bin")
+    }
+
+    steps {
+        exec {
+            name = "Executable with parameters"
+            id = "Executable_with_parameters"
+            path = "mytool"
+        }
     }
 })
