@@ -1,0 +1,6 @@
+{
+  "id": "path-prefix-test",
+  "name": "TEAMCITY_PATH_PREFIX Exec Test",
+  "version": "1.0",
+  "description": "Tests if TEAMCITY_PATH_PREFIX is respected in exec mode (expected to fail)"
+}
