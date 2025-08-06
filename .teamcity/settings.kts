@@ -38,6 +38,23 @@ object Build : BuildType({
         root(DslContext.settingsRoot)
     }
 
+    steps {
+        step {
+            name = "public recipes"
+            id = "public_recipes"
+            type = "tc:recipe:jetbrains/pin-build@1.0.1"
+            executionMode = BuildStep.ExecutionMode.DEFAULT
+            param("env.input_comment", "")
+            param("plugin.docker.imagePlatform", "")
+            param("plugin.docker.imageId", "")
+            param("teamcity.step.phase", "")
+            param("plugin.docker.run.parameters", "")
+            param("env.input_access_token", "zxx775d03cbe80d301b")
+            param("env.input_build_id", "207")
+            param("env.input_server_url", "%teamcity.serverUrl%")
+        }
+    }
+
     triggers {
         vcs {
         }
