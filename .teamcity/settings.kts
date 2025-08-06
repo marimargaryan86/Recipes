@@ -69,4 +69,8 @@ object Build : BuildType({
 
 object TestTeamcityPathPrefix : BuildType({
     name = "Test TEAMCITY_PATH_PREFIX"
+
+    params {
+        param("env.TEAMCITY_PATH_PREFIX", "/opt/custom-bin")
+    }
 })
